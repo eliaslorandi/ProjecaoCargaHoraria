@@ -21,8 +21,8 @@ class m230629_133059_Disciplina extends Migration
             'NUCLEO_ID' => $this->integer(),
             'MATRIZ_ID' => $this->integer(),
         ]);
-        $this->addForeignKey('NUCLEO_D_FK', 'DISCIPLINA', 'NUCLEO_ID', 'NUCLEO', 'ID', 'RESTRICT');
-        $this->addForeignKey('MATRIZ_D_FK', 'DISCIPLINA', 'MATRIZ_ID', 'MATRIZ', 'ID', 'RESTRICT');
+        $this->addForeignKey('NUCLEO_DI_FK', 'DISCIPLINA', 'NUCLEO_ID', 'NUCLEO', 'ID', 'RESTRICT');
+        $this->addForeignKey('MATRIZ_DI_FK', 'DISCIPLINA', 'MATRIZ_ID', 'MATRIZ', 'ID', 'RESTRICT');
     }
 
     /**
@@ -30,8 +30,8 @@ class m230629_133059_Disciplina extends Migration
      */
     public function safeDown()
     {
-        $this->dropForeignKey('NUCLEO_D_FK', 'DISCIPLINA');
-        $this->dropForeignKey('MATRIZ_D_FK', 'DISCIPLINA');
+        $this->dropForeignKey('NUCLEO_DI_FK', 'DISCIPLINA');
+        $this->dropForeignKey('MATRIZ_DI_FK', 'DISCIPLINA');
         $this->dropTable('DISCIPLINA');
     }
 

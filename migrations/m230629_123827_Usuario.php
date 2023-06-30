@@ -20,7 +20,7 @@ class m230629_123827_Usuario extends Migration
             'SENHA' => $this->string(99),
             'NUCLEO_ID' => $this->integer(),
         ]);
-        $this->addForeignKey('NUCLEO_FK', 'USUARIO', 'NUCLEO_ID', 'NUCLEO', 'ID', 'RESTRICT');
+        $this->addForeignKey('NUCLEO_US_FK', 'USUARIO', 'NUCLEO_ID', 'NUCLEO', 'ID', 'RESTRICT');
     }
 
     /**
@@ -28,7 +28,7 @@ class m230629_123827_Usuario extends Migration
      */
     public function safeDown()
     {
-        $this->dropForeignKey('NUCLEO_FK', 'USUARIO');
+        $this->dropForeignKey('NUCLEO_US_FK', 'USUARIO');
         $this->dropTable('USUARIO');
     }
 

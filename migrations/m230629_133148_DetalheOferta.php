@@ -20,8 +20,8 @@ class m230629_133148_DetalheOferta extends Migration
             'DISCIPLINA_ID' => $this->integer(),
             'OFERTA_ID' => $this->integer(),
         ]);
-        $this->addForeignKey('DISCIPLINA_FK', 'DETALHEOFERTA', 'DISCIPLINA_ID', 'DISCIPLINA', 'ID', 'RESTRICT');
-        $this->addForeignKey('OFERTA_FK', 'DETALHEOFERTA', 'OFERTA_ID', 'OFERTA', 'ID', 'RESTRICT');
+        $this->addForeignKey('DISCIPLINA_DE_FK', 'DETALHEOFERTA', 'DISCIPLINA_ID', 'DISCIPLINA', 'ID', 'RESTRICT');
+        $this->addForeignKey('OFERTA_DE_FK', 'DETALHEOFERTA', 'OFERTA_ID', 'OFERTA', 'ID', 'RESTRICT');
     }
 
     /**
@@ -29,6 +29,8 @@ class m230629_133148_DetalheOferta extends Migration
      */
     public function safeDown()
     {
+        $this->dropForeignKey('DISCIPLINA_DE_FK', 'DETALHEOFERTA');
+        $this->dropForeignKey('OFERTA_DE_FK', 'DETALHEOFERTA');
         $this->dropTable('DETALHEOFERTA');
     }
 

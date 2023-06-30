@@ -20,8 +20,8 @@ class m230629_133214_Coordena extends Migration
             'FIM' => $this->date(),
         ]);
         $this->addPrimaryKey('PK_COORDENA', 'COORDENA', ['USUARIO_ID', 'CURSO_ID']);
-        $this->addForeignKey('USUARIO_C_FK', 'COORDENA', 'USUARIO_ID', 'USUARIO', 'ID', 'RESTRICT', 'RESTRICT');
-        $this->addForeignKey('CURSO_C_FK', 'COORDENA', 'CURSO_ID', 'CURSO', 'ID', 'RESTRICT', 'RESTRICT');
+        $this->addForeignKey('USUARIO_CO_FK', 'COORDENA', 'USUARIO_ID', 'USUARIO', 'ID', 'RESTRICT', 'RESTRICT');
+        $this->addForeignKey('CURSO_CO_FK', 'COORDENA', 'CURSO_ID', 'CURSO', 'ID', 'RESTRICT', 'RESTRICT');
     }
 
     /**
@@ -29,8 +29,8 @@ class m230629_133214_Coordena extends Migration
      */
     public function safeDown()
     {
-        $this->dropForeignKey('USUARIO_C_FK', 'COORDENA');
-        $this->dropForeignKey('CURSO_C_FK', 'COORDENA');
+        $this->dropForeignKey('USUARIO_CO_FK', 'COORDENA');
+        $this->dropForeignKey('CURSO_CO_FK', 'COORDENA');
         $this->dropTable('COORDENA');
     }
 
