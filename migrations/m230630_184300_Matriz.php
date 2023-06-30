@@ -3,21 +3,21 @@
 use yii\db\Migration;
 
 /**
- * Class m230629_133037_Matriz
+ * Class m230630_184300_Matriz
  */
-class m230629_133037_Matriz extends Migration
+class m230630_184300_Matriz extends Migration
 {
     /**
      * {@inheritdoc}
      */
     public function safeUp()
     {
-        #MATRIZ(ID, SIGLA, CH_TOTAL, CURSO_FK)
-        $this->createTable('MATRIZ', [
+        #MATRIZ(ID, SIGLA, CH_TOTAL, CURSO_ID)
+        $this->createTable('matriz', [
             'ID' => $this->primaryKey(),
-            'SIGLA' => $this->string(10)->notNull(),
-            'CH_TOTAL' => $this->integer(),
-            'CURSO_ID' => $this->integer(),
+            'SIGLA' => $this->string(99)->notNull(),
+            'CH_TOTAL' => $this->integer()->notNull(),
+            'CURSO_ID' => $this->integer()->notNull(),
         ]);
     }
 
@@ -26,7 +26,7 @@ class m230629_133037_Matriz extends Migration
      */
     public function safeDown()
     {
-        $this->dropTable('MATRIZ');
+        $this->dropTable('matriz');
     }
 
     /*
@@ -38,7 +38,7 @@ class m230629_133037_Matriz extends Migration
 
     public function down()
     {
-        echo "m230629_133037_Matriz cannot be reverted.\n";
+        echo "m230630_184300_Matriz cannot be reverted.\n";
 
         return false;
     }
