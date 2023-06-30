@@ -12,7 +12,13 @@ class m230629_133037_Matriz extends Migration
      */
     public function safeUp()
     {
-
+        #MATRIZ(ID, SIGLA, CH_TOTAL, CURSO_FK)
+        $this->createTable('MATRIZ', [
+            'ID' => $this->primaryKey(),
+            'SIGLA' => $this->string(10)->notNull(),
+            'CH_TOTAL' => $this->integer(),
+            'CURSO_ID' => $this->integer(),
+        ]);
     }
 
     /**
@@ -20,9 +26,7 @@ class m230629_133037_Matriz extends Migration
      */
     public function safeDown()
     {
-        echo "m230629_133037_Matriz cannot be reverted.\n";
-
-        return false;
+        $this->dropTable('MATRIZ');
     }
 
     /*

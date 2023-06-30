@@ -13,6 +13,13 @@ class m230629_132521_Curso extends Migration
     public function safeUp()
     {
         #CURSO(ID, NOME, CH_TOTAL, Q_PERIODOS, SIGLA)
+        $this->createTable('CURSO', [
+            'ID' => $this->primaryKey(),
+            'NOME' => $this->string(99)->notNull(),
+            'CH_TOTAL' => $this->integer(),
+            'Q_PERIODOS' => $this->integer(),
+            'SIGLA' => $this->string(10),
+        ]);
     }
 
     /**
@@ -20,9 +27,7 @@ class m230629_132521_Curso extends Migration
      */
     public function safeDown()
     {
-        echo "m230629_132521_Curso cannot be reverted.\n";
-
-        return false;
+        $this->dropTable('CURSO');
     }
 
     /*
