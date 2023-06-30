@@ -15,7 +15,6 @@ use Yii;
  *
  * @property Coordena[] $coordenas
  * @property Usuario[] $uSUARIOs
- * @property Matriz[] $matrizs
  */
 class Curso extends \yii\db\ActiveRecord
 {
@@ -74,7 +73,7 @@ class Curso extends \yii\db\ActiveRecord
     }
 
     /**
-     * Gets query for [[Matrizs]].
+     * Gets query for [[Matrizes]].
      *
      * @return \yii\db\ActiveQuery
      */
