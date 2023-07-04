@@ -14,9 +14,9 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'NOME')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'CH_TOTAL')->textInput() ?>
+    <?= $form->field($model, 'CH_TOTAL')->textInput(['type' => 'number']) ?>
 
-    <?= $form->field($model, 'Q_PERIODOS')->textInput() ?>
+    <?= $form->field($model, 'Q_PERIODOS')->textInput(['type' => 'number']) ?> //tipo numerico, add propriedade
 
     <?= $form->field($model, 'SIGLA')->textInput(['maxlength' => true]) ?>
 
