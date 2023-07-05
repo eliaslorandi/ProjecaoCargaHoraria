@@ -16,12 +16,12 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'CH_TOTAL')->textInput(['type' => 'number']) ?>
 
-    <?= $form->field($model, 'Q_PERIODOS')->textInput(['type' => 'number']) ?> //tipo numerico, add propriedade
+    <?= $form->field($model, 'Q_PERIODOS')->textInput(['type' => 'number']) //tipo numerico, add propriedade?> 
 
     <?= $form->field($model, 'SIGLA')->textInput(['maxlength' => true]) ?>
 
     <div class="form-group">
-        <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton('Salvar', ['class' => 'btn btn-success']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

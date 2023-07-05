@@ -34,12 +34,14 @@ $this->params['breadcrumbs'][] = $this->title;
             'CH_TOTAL',
             'Q_PERIODOS',
             'SIGLA',
+            
             [
                 'class' => ActionColumn::className(),
                 'urlCreator' => function ($action, Curso $model, $key, $index, $column) {
                     return Url::toRoute([$action, 'ID' => $model->ID]);
                  }
             ],
+            
         ],
     ]); ?>
 
