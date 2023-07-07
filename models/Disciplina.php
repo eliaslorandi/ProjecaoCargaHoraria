@@ -46,12 +46,12 @@ class Disciplina extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'ID' => 'ID',
+            'ID' => 'Id',
             'NOME' => 'Nome',
-            'CH' => 'Ch',
-            'PERIODO' => 'Periodo',
-            'NUCLEO_ID' => 'Nucleo ID',
-            'MATRIZ_ID' => 'Matriz ID',
+            'CH' => 'Carga Horária',
+            'PERIODO' => 'Período',
+            'NUCLEO_ID' => 'Núcleo',
+            'MATRIZ_ID' => 'Matriz',
         ];
     }
 
@@ -70,7 +70,7 @@ class Disciplina extends \yii\db\ActiveRecord
      *
      * @return \yii\db\ActiveQuery
      */
-    public function getNUCLEO()
+    public function getNucleo()
     {
         return $this->hasOne(Nucleo::class, ['ID' => 'NUCLEO_ID']);
     }

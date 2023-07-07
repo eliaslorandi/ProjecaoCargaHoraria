@@ -5,8 +5,8 @@ use yii\helpers\Html;
 /** @var yii\web\View $this */
 /** @var app\models\Matriz $model */
 
-$this->title = 'Create Matriz';
-$this->params['breadcrumbs'][] = ['label' => 'Matrizs', 'url' => ['index']];
+$this->title = 'Nova Matriz';
+$this->params['breadcrumbs'][] = ['label' => 'Matriz', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="matriz-create">

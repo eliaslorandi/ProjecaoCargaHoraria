@@ -10,7 +10,7 @@ use yii\grid\GridView;
 /** @var app\models\MatrizSearch $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Matrizs';
+$this->title = 'Matrizes';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="matriz-index">
@@ -18,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Matriz', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Nova Matriz', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>

@@ -48,7 +48,7 @@ class Curso extends \yii\db\ActiveRecord
         return [
             'ID' => 'Id',
             'NOME' => 'Nome',
-            'CH_TOTAL' => 'Carga Horária Total',
+            'CH_TOTAL' => 'Carga Horária',
             'Q_PERIODOS' => 'Quantidade de Periodos',
             'SIGLA' => 'Sigla',
         ];

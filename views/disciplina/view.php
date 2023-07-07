@@ -33,8 +33,16 @@ $this->params['breadcrumbs'][] = $this->title;
             'NOME',
             'CH',
             'PERIODO',
-            'NUCLEO_ID',
-            'MATRIZ_ID',
+            //para aparecer na lista os nomes corretos
+            [
+                'attribute' => 'nucleo.NOME',
+                'label'=>'Núcleo',
+            ],
+            [
+                'attribute' => 'nucleo.Matriz',
+                'label'=>'Matriz',
+            ],
+            
         ],
     ]) ?>
 

@@ -42,8 +42,8 @@ class Matriz extends \yii\db\ActiveRecord
         return [
             'ID' => 'ID',
             'SIGLA' => 'Sigla',
-            'CH_TOTAL' => 'Ch Total',
-            'CURSO_ID' => 'Curso ID',
+            'CH_TOTAL' => 'Carga Horária',
+            'CURSO_ID' => 'Curso Id',
         ];
     }
 }
