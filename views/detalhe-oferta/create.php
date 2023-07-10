@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /** @var app\models\DetalheOferta $model */
 
 $this->title = 'Create Detalhe Oferta';
-$this->params['breadcrumbs'][] = ['label' => 'Detalhe Ofertas', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Detalhe de Oferta', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="detalhe-oferta-create">

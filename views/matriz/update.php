@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /** @var app\models\Matriz $model */
 
 $this->title = 'Update Matriz: ' . $model->ID;
-$this->params['breadcrumbs'][] = ['label' => 'Matrizs', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Matrizes', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->ID, 'url' => ['view', 'ID' => $model->ID]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>
