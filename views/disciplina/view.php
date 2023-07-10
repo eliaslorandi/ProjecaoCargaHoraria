@@ -39,7 +39,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'label'=>'Núcleo',
             ],
             [
-                'attribute' => 'nucleo.Matriz',
+                'attribute' => 'matriz.SIGLA',
                 'label'=>'Matriz',
             ],
             

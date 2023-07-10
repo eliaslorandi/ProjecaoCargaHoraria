@@ -15,7 +15,7 @@ use Yii;
  * @property int|null $MATRIZ_ID
  *
  * @property Detalheoferta[] $detalheofertas
- * @property Nucleo $nUCLEO
+ * @property Nucleo $Nucleo
  */
 class Disciplina extends \yii\db\ActiveRecord
 {
@@ -63,6 +63,16 @@ class Disciplina extends \yii\db\ActiveRecord
     public function getDetalheofertas()
     {
         return $this->hasMany(Detalheoferta::class, ['DISCIPLINA_ID' => 'ID']);
+    }
+
+    /**
+     * Gets query for [[MATRIZ]].
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getMatriz()
+    {
+        return $this->hasOne(Matriz::class, ['ID' => 'MATRIZ_ID']);
     }
 
     /**
